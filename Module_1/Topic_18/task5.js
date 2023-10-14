@@ -10,4 +10,5 @@ let convert = function (bytes) {
   const megabytes = (bytes / (1024 * 1024)).toFixed(2);
   return megabytes;
 };
+
 console.log(convert(10000))
