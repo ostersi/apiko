@@ -14,7 +14,7 @@
 // до нижнього регістру 'Result: custom - web - and - mobile - platforms length: 39'
 
 // 2) capitalizeAllFirst - приймає testArray -> перетворює стрічки так що лише перший символ у
-// верхньому регістрі, інші у нижньому, об'єднує їх в одну стрічку з символом'-' -> виводить в
+// верхньому регістрі, інші у нижньому, об'єднує їх в одну стрічку з символом'-' -> gitвиводить в
 // консоль 'Result: Custom-Web-And-Mobile-Platforms length: 31'
 
 const arr = ["CusTom", "Web", "aNd", "MoBile", "PlaTfoRms"];
