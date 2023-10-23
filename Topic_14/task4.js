@@ -5,19 +5,18 @@
 // {Max: {age: 23, city: “London”}, Mike: {age: 20: city: “NY”}} => [“Max”]
 
 function findUser(initialObject) {
-  const result = [];
-
+  const arr = [];
   for (const name in initialObject) {
     if (
-      initialObject.hasOwnProperty(name) &&
-      initialObject[name].age > 18 &&
-      initialObject[name].city === "London"
+      Object.values(initialObject[name])[0] >= 18 &&
+      Object.values(initialObject[name])[1] == "London"
+      // initialObject[name].age > 18 &&
+      // initialObject[name].city === "London"
     ) {
-      result.push(name);
+      arr.push(name);
     }
   }
-
-  console.log(result);
+  console.log(arr);
 }
 
 findUser({ Max: { age: 23, city: "London" }, Mike: { age: 20, city: "NY" } });
