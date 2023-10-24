@@ -36,6 +36,5 @@ let allToLower = compose(
   modifyArray((str) => str.toLowerCase())
 );
 
-console.log("Result:", capitalizeAllFirst(arr), "\nlength:", capitalizeAllFirst(arr).length
-);
+console.log("Result:", capitalizeAllFirst(arr), "\nlength:", capitalizeAllFirst(arr).length);
 console.log("Result:", allToLower(arr), "\nlength:", allToLower(arr).length);
