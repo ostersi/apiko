@@ -20,9 +20,9 @@
 const arr = ["CusTom", "Web", "aNd", "MoBile", "PlaTfoRms"];
 
 let compose =
-  (...functions) =>
+  (...fncs) =>
   (data) =>
-    functions.reduceRight((value, func) => func(value), data);
+    fncs.reduceRight((value, func) => func(value), data);
 
 let modifyArray = (modifyCondition) => (data) => data.map(modifyCondition);
 
@@ -39,7 +39,7 @@ let allToLower = compose(
 console.log(
   "Result:",
   capitalizeAllFirst(arr),
-  "length:",
+  "\nlength:",
   capitalizeAllFirst(arr).length
 );
-console.log("Result:", allToLower(arr), "length:", allToLower(arr).length);
+console.log("Result:", allToLower(arr), "\nlength:", allToLower(arr).length);
