@@ -14,9 +14,7 @@ Calculator.prototype.subtract = function (a, b) {
   return a - b;
 };
 
-function AdvancedCalculator() {
-  Calculator.call(this);
-}
+function AdvancedCalculator() {}
 
 AdvancedCalculator.prototype = Object.create(Calculator.prototype);
 
