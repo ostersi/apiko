@@ -17,3 +17,29 @@
 // на отримання певного альбому повинні виконуватись паралельно
 // У разі успішного виконання промісу з getSpecifiedAlbums, вивести у консоль результат.
 // Очікуваний результат - масив вказаних альбомів
+
+const baseUrl = "https://jsonplaceholder.typicode.com";
+
+function getAlbum(id) {
+  return fetch(`${baseUrl}/albums/${id}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Status: ${response.status}`);
+      }
+      return response.json();
+    });
+}
+
+function getSpecifiedAlbums(ids = []) {
+  const albumPromises = ids.map(id => getAlbum(id));
+  return Promise.all(albumPromises);
+}
+
+getSpecifiedAlbums([1, 15]).then(results => {
+    console.log("Масив вказаних альбомів: \n", results);
+  }).catch(e => {
+    console.log("Помилка: ", e);
+  });
+
+
+

@@ -11,3 +11,18 @@
 // Вивести у консоль результат
 // fetch(`${baseUrl}/...`);
 // Очікуваний результат - масив альбомів користувача 10
+
+const baseUrl = "https://jsonplaceholder.typicode.com";
+
+fetch(`${baseUrl}/users/10/albums`).then(response => {
+    if (!response.ok) {
+      throw new Error(`Status: ${response.status}`);
+    }
+    return response.json();
+  }).then(albums => {
+    console.log("Масив альбомів користувача 10: \n", albums);
+  }).catch(e => {
+    console.error("Помилка:", e);
+  });
+
+
